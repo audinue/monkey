@@ -27,6 +27,7 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><i>prototype</i>.<b>divide</b>(value: number): DOMPointReadOnly</code>
 - <code><i>prototype</i>.<b>divide</b>(other: DOMPointReadOnly): DOMPointReadOnly</code>
 - <code><i>prototype</i>.<b>distanceTo</b>(other: DOMPointReadOnly): number</code>
+- <code><b>fromSize</b>(object: {width: number, height: number}): DOMPointReadOnly</code>
 
 ### [DOMRectReadOnly](https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly)
 - <code><i>prototype</i>.<b>contains</b>(point: DOMPointReadOnly): boolean</code>

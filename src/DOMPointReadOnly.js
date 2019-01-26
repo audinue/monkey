@@ -30,3 +30,7 @@ DOMPointReadOnly.prototype.divide = function (valueOrOther) {
 DOMPointReadOnly.prototype.distanceTo = function (other) {
   return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2))
 }
+
+DOMPointReadOnly.fromSize = function (object) {
+  return new DOMPointReadOnly(object.width, object.height)
+}

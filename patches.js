@@ -77,6 +77,10 @@ DOMPointReadOnly.prototype.distanceTo = function (other) {
   return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2))
 }
 
+DOMPointReadOnly.fromSize = function (object) {
+  return new DOMPointReadOnly(object.width, object.height)
+}
+
 DOMRectReadOnly.prototype.contains = function (pointOrOther) {
   return pointOrOther instanceof DOMRectReadOnly
     ? this.contains(new DOMPointReadOnly(pointOrOther.left, pointOrOther.top)) &&
