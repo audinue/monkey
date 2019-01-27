@@ -46,12 +46,12 @@ DOMRectReadOnly.fromLTRB = function (left, top, right, bottom) {
 }
 
 DOMRectReadOnly.fromPoints = function (points) {
-  const head = points[0]
-  const tail = points.slice(1)
+  var head = points[0]
+  var tail = points.slice(1)
   return DOMRectReadOnly.fromLTRB(
-    tail.reduce((min, point) => Math.min(min, point.x), head.x),
-    tail.reduce((min, point) => Math.min(min, point.y), head.y),
-    tail.reduce((max, point) => Math.max(max, point.x), head.x),
-    tail.reduce((max, point) => Math.max(max, point.y), head.y)
+    tail.reduce(function (min, point) { return Math.min(min, point.x) }, head.x),
+    tail.reduce(function (min, point) { return Math.min(min, point.y) }, head.y),
+    tail.reduce(function (max, point) { return Math.max(max, point.x) }, head.x),
+    tail.reduce(function (max, point) { return Math.max(max, point.y) }, head.y)
   )
 }

@@ -1,6 +1,6 @@
 # Monkey
 
-Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API).
+Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the awesome [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API).
 
 ## Usage
 
@@ -26,6 +26,8 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><i>prototype</i>.<b>multiply</b>(other: DOMPointReadOnly): DOMPointReadOnly</code> :new:
 - <code><i>prototype</i>.<b>divide</b>(value: number): DOMPointReadOnly</code> :new:
 - <code><i>prototype</i>.<b>divide</b>(other: DOMPointReadOnly): DOMPointReadOnly</code> :new:
+- <code><i>prototype</i>.<b>modulo</b>(value: number): DOMPointReadOnly</code> :new:
+- <code><i>prototype</i>.<b>modulo</b>(other: DOMPointReadOnly): DOMPointReadOnly</code> :new:
 - <code><i>prototype</i>.<b>distanceTo</b>(other: DOMPointReadOnly): number</code> :new:
 - <code><b>fromSize</b>(object: {width: number, height: number}): DOMPointReadOnly</code> :new:
 
@@ -40,6 +42,7 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><b>fromPoints</b>(points: DOMPointReadOnly[]): DOMRectReadOnly</code> :new:
 
 ### [DOMMatrixReadOnly](https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly)
+- <code><i>prototype</i>.<b>transformPoints</b>(points: DOMPointReadOnly[]): DOMPointReadOnly[]</code> :new:
 - <code><i>prototype</i>.<b>transformRect</b>(rect: DOMRectReadOnly): DOMRectReadOnly</code> :new:
 
 ### [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
@@ -49,6 +52,7 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><i>prototype</i>.<b>drawImage</b>(image: CanvasImageSource): void</code> :new:
 - <code><i>prototype</i>.<b>translate</b>(x: number, y: number): void</code>
 - <code><i>prototype</i>.<b>translate</b>(point: DOMPointReadOnly): void</code> :new:
+- <code><i>prototype</i>.<b>rotateDegree</b>(angle: number): void</code>
 - <code><i>prototype</i>.<b>scale</b>(x: number, y: number): void</code>
 - <code><i>prototype</i>.<b>scale</b>(value: number): void</code> :new:
 - <code><i>prototype</i>.<b>scale</b>(point: DOMPointReadOnly): void</code> :new:
@@ -56,6 +60,10 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><i>prototype</i>.<b>transform</b>(matrix: DOMMatrixReadOnly): void</code> :new:
 - <code><i>prototype</i>.<b>fillRect</b>(x: number, y: number, width: number, height: number): void</code>
 - <code><i>prototype</i>.<b>fillRect</b>(rect: DOMRectReadOnly): void</code> :new:
+- <code><i>prototype</i>.<b>moveTo</b>(x: number, y: number): void</code>
+- <code><i>prototype</i>.<b>moveTo</b>(point: DOMPointReadOnly): void</code> :new:
+- <code><i>prototype</i>.<b>lineTo</b>(x: number, y: number): void</code>
+- <code><i>prototype</i>.<b>lineTo</b>(point: DOMPointReadOnly): void</code> :new:
 - <code><i>prototype</i>.<b>strokeRect</b>(x: number, y: number, width: number, height: number): void</code>
 - <code><i>prototype</i>.<b>strokeRect</b>(rect: DOMRectReadOnly): void</code> :new:
 - <code><i>prototype</i>.<b>strokeLine</b>(x1: number, y1: number, x2: number, y2: number): void</code> :new:

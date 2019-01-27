@@ -1,3 +1,3 @@
 @echo off
 
-type src\*.js > patches.js
+uglifyjs src\*.js -cmo patches.js
