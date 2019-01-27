@@ -13,8 +13,8 @@ CanvasRenderingContext2D.prototype.transform = function (a, b, c, d, e, f) {
 const fillRect = CanvasRenderingContext2D.prototype.fillRect
 
 CanvasRenderingContext2D.prototype.fillRect = function (x, y, width, height) {
-  if (a instanceof DOMRectReadOnly) {
-    fillRect.call(a.x, a.y, a.width, a.height)
+  if (x instanceof DOMRectReadOnly) {
+    fillRect.call(x.x, x.y, x.width, x.height)
   } else {
     fillRect.call(x, y, width, height)
   }
@@ -23,8 +23,8 @@ CanvasRenderingContext2D.prototype.fillRect = function (x, y, width, height) {
 const strokeRect = CanvasRenderingContext2D.prototype.strokeRect
 
 CanvasRenderingContext2D.prototype.strokeRect = function (x, y, width, height) {
-  if (a instanceof DOMRectReadOnly) {
-    strokeRect.call(a.x, a.y, a.width, a.height)
+  if (x instanceof DOMRectReadOnly) {
+    strokeRect.call(x.x, x.y, x.width, x.height)
   } else {
     strokeRect.call(x, y, width, height)
   }
