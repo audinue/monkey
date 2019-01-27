@@ -33,6 +33,8 @@ Some useful [monkey patches](https://en.wikipedia.org/wiki/Monkey_patch) for the
 - <code><i>prototype</i>.<b>contains</b>(point: DOMPointReadOnly): boolean</code>
 - <code><i>prototype</i>.<b>contains</b>(other: DOMRectReadOnly): boolean</code>
 - <code><i>prototype</i>.<b>intersects</b>(other: DOMRectReadOnly): boolean</code>
+- <code><i>prototype</i>.<b>inflate</b>(value: number): DOMRectReadOnly</code>
+- <code><i>prototype</i>.<b>inflate</b>(point: DOMPointReadOnly): DOMRectReadOnly</code>
 - <code><i>prototype</i>.<b>toPoints</b>(): DOMPointReadOnly[]</code>
 - <code><b>fromLTRB</b>(left: number, top: number, right: number, bottom: number): DOMRectReadOnly</code>
 - <code><b>fromPoints</b>(points: DOMPointReadOnly[]): DOMRectReadOnly</code>

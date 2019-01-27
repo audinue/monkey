@@ -98,6 +98,22 @@ DOMRectReadOnly.prototype.intersects = function (other) {
     other.top <= this.bottom
 }
 
+DOMRectReadOnly.prototype.inflate = function (valueOrPoint) {
+  return valueOrPoint instanceof DOMPointReadOnly
+    ? new DOMRectReadOnly(
+        this.x - valueOrPoint.x,
+        this.y - valueOrPoint.y,
+        this.width + valueOrPoint.x * 2,
+        this.height + valueOrPoint.y * 2
+      )
+    : new DOMRectReadOnly(
+        this.x - valueOrPoint,
+        this.y - valueOrPoint,
+        this.width + valueOrPoint * 2,
+        this.height + valueOrPoint * 2
+      )
+}
+
 DOMRectReadOnly.prototype.toPoints = function () {
   return [
     new DOMPointReadOnly(this.left, this.top),
